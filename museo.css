@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background: #3e8592;                                            
+}
+.flor{
+  float: left;
+  position: absolute;
+  z-index: -25;
+  rotate: 45deg;
+  left: -65px;
+  max-width: 36rem;
+  top: 25px;
+}
+
+header {
+  padding: 2rem;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 5%;
+  margin-top: 1%;
+}
+
+header h1 {
+  margin: 0;
+  color: #3ca172; /* color tipo madera */
+  font-size: 6rem;
+  font-style: oblique;
+  -webkit-text-stroke: 2px rgb(0, 0, 0);
+  text-shadow: 4px 3px 1px rgb(0, 0, 0);
+}
+header h2 {
+  margin: 0;
+  color: #d0e5e9; /* color tipo madera */
+  font-size: 8rem;
+  font-style: oblique;
+  -webkit-text-stroke: 2px rgb(0, 0, 0);
+  text-shadow: 5px 3px 1px rgb(0, 0, 0);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(650px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+  justify-items: center;
+  margin-bottom: 3%;
+}
+
+/* Marco que se adapta a la orientación de la imagen */
+.frame {
+  background: #fdfdfd;
+  border: 15px solid #8b5e3c; /* marco tipo madera */
+  box-shadow: 12px 8px 3px rgba(0,0,0,0.2);
+  max-width: 480px;
+  max-height: 800px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.frame img {
+  width: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.frame:hover {
+  transform: scale(1.05);
+  box-shadow: 22px 18px 5px rgba(0,0,0,0.2);
+}
+
+/* Caja debajo de cada cuadro */
+.info {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.info h3 {
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.info button {
+  background: #3ca172;
+  color: white;
+  border: 2px solid rgb(0, 0, 0);
+  padding: 0.6rem 1.2rem;
+  margin-top: 0.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.info button:hover {
+  background: #235c41;
+  transform: scale(1.05);
+}
+
+footer {
+  
+  background: #a09f9f; 
+  padding: 1.5rem;
+  text-align: center;
+  border-top: 6px solid #ccc; /* simula zócalo */
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    header h1,header h2 {
+      font-size: 3.5rem;
+    }
+    .gallery{
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      padding: 1rem ;
+    margin-bottom: 3%;
+    margin-top: 50%;
+    }
+    .flor{
+    rotate: 45deg;
+    left: -65px;
+    max-width: 16rem;
+    top: 12rem;
+}
+}
